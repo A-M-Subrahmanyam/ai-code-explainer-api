@@ -1,0 +1,9 @@
+services:
+  - type: web
+  name: ai-explainer-api
+  env: java
+  buildCommand: ./mvnw clean install -DskipTests
+  startCommand: java -jar target/demo-0.0.1-SNAPSHOT.jar
+  envVars:
+    - key: GEMINI_API_KEY
+    sync: false
